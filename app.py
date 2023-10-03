@@ -1,11 +1,12 @@
 from flask import Flask
+from flask.templating import render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def printhello():
-  return("Hello World")
+  return render_template("home.html")
 
 
 if (__name__ == "__main__"):
